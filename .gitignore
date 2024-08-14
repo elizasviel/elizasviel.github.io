@@ -1,0 +1,9 @@
+node_modules
+
+/.cache
+/build
+.env
+/largeFiles
+.DS_Store
+.vscode
+/public
