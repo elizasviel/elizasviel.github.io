@@ -27,9 +27,9 @@ export default function Home() {
   const gifs = [
     {
       src: mailGif,
-      link: "https://norman-mailing-list.vercel.app/",
+      link: "https://maildemo.app/",
     },
-    { src: gameGif, link: "https://norman-art.vercel.app" },
+    { src: gameGif, link: "https://bubblepop.app/" },
     // Add more gifs and links as needed
   ];
 
@@ -146,17 +146,17 @@ export default function Home() {
           <h2> Software Portfolio </h2>
 
           <a
-            href="https://norman-art.vercel.app"
+            href="https://bubblepop.app/"
             style={{ textDecoration: "none", color: "lightgray" }}
           >
-            norman-art.vercel.app
+            bubblepop.app
           </a>
 
           <a
-            href="https://norman-mailing-list.vercel.app/"
+            href="https://maildemo.app/"
             style={{ textDecoration: "none", color: "lightgray" }}
           >
-            norman-mailing-list.vercel.app
+            maildemo.app
           </a>
 
           <h2> Contact </h2>
