@@ -4,6 +4,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import { netlifyPlugin } from "@netlify/remix-adapter/plugin";
 
 export default defineConfig({
+  publicDir: "public",
   plugins: [
     remix({
       ssr: false,

@@ -1,4 +1,6 @@
 import type { MetaFunction, LinksFunction } from "@remix-run/node";
+import { Link } from "@remix-run/react";
+import resumePdf from "../images/Norman Qian Resume 2024 V.1.pdf";
 import { useState, useEffect, useRef, useCallback } from "react";
 import gameGif from "../images/gameGif.gif";
 import mailGif from "../images/mailGif.gif";
@@ -179,6 +181,12 @@ export default function Home() {
           >
             normanqian@gmail.com
           </a>
+          <a
+            href={resumePdf}
+            style={{ textDecoration: "none", color: "lightgray" }}
+          >
+            View Resume
+          </a>
         </div>
       </div>
     </>
@@ -207,16 +215,19 @@ const BlackboardLG = () => {
         />
         <br />
 
-        <ProjectItem
-          text="linkedin.com/in/norman-qian"
-          link="https://linkedin.com/in/norman-qian"
-        />
-        <br />
+        <div style={{ paddingBottom: "0.7em" }}>
+          <ProjectItem
+            text="linkedin.com/in/norman-qian"
+            link="https://linkedin.com/in/norman-qian"
+          />
+        </div>
         <br />
         <ProjectItem
           text="normanqian@gmail.com"
           link="mailto:normanqian@gmail.com"
         />
+        <br />
+        <ProjectItem text="View Resume" link={resumePdf} />
       </div>
     </>
   );
