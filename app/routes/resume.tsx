@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import type { LoaderFunction } from "@remix-run/node";
+import { redirect } from "@remix-run/node";
 import resumePdf from "../images/Norman Qian Resume 2024 V.1.pdf";
 
-export default function Resume() {
-  useEffect(() => {
-    window.location.href = resumePdf;
-  }, []);
+export const loader: LoaderFunction = async () => {
+  return redirect(resumePdf);
+};
 
+export default function Resume() {
   return null;
 }
