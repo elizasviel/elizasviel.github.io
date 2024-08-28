@@ -182,7 +182,7 @@ export default function Home() {
             normanqian@gmail.com
           </a>
           <a
-            href={resumePdf}
+            href="/resume"
             style={{ textDecoration: "none", color: "lightgray" }}
           >
             View Resume
@@ -227,7 +227,7 @@ const BlackboardLG = () => {
           link="mailto:normanqian@gmail.com"
         />
         <br />
-        <ProjectItem text="View Resume" link={resumePdf} />
+        <ProjectItem text="View Resume" link="/resume" />
       </div>
     </>
   );
