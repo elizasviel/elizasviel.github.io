@@ -1,4 +1,3 @@
-import resumePdf from "../images/Norman Qian Resume 2024 V.1.pdf";
 import { useState, useEffect } from "react";
 import gameGif from "../images/gameGif.gif";
 import mailGif from "../images/mailGif.gif";
@@ -11,7 +10,6 @@ import croppedBlackboard from "../images/croppedBlackBoard.png";
 import "./App.css";
 
 export default function Home() {
-  const [project, setProject] = useState("");
   const [currentGifIndex, setCurrentGifIndex] = useState(0);
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [brightness, setBrightness] = useState(1);
@@ -172,7 +170,7 @@ export default function Home() {
             normanqian@gmail.com
           </a>
           <a
-            href={resumePdf}
+            href="/resume"
             style={{ textDecoration: "none", color: "lightgray" }}
           >
             View Resume
@@ -217,7 +215,7 @@ const BlackboardLG = () => {
           link="mailto:normanqian@gmail.com"
         />
         <br />
-        <ProjectItem text="View Resume" link={resumePdf} />
+        <ProjectItem text="View Resume" link="/resume" />
       </div>
     </>
   );
