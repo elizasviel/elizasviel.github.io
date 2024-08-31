@@ -1,0 +1,1 @@
+@keyframes float{0%{transform:translateY(0) translate(0)}50%{transform:translateY(100vh) translate(100vw);rotate:180deg}to{transform:translateY(0) translate(0);filter:brightness(1)}}.desktop-view{display:block}.mobile-view{display:none}@media (max-width: 767px){.desktop-view{display:none}.mobile-view{display:block}}
