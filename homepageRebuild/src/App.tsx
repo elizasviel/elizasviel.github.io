@@ -14,8 +14,8 @@ const MobileProjectItem = ({ text, link }: { text: string; link: string }) => {
       href={link}
       style={{
         display: "block",
-        margin: "2vw 0",
-        padding: "2vw 4vw",
+        margin: "1vw 0", // Reduced margin
+        padding: "1.5vw 4vw", // Reduced padding
         backgroundColor: "rgba(255, 255, 255, 0.1)",
         borderRadius: "5px",
         textDecoration: "none",
@@ -158,13 +158,13 @@ export default function Home() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            justifyContent: "space-between",
-            padding: "3vh 5vw",
+            justifyContent: "flex-start", // Changed from space-between
+            padding: "2vh 5vw", // Reduced top and bottom padding
             boxSizing: "border-box",
             overflowY: "auto",
           }}
         >
-          <header style={{ textAlign: "center" }}>
+          <header style={{ textAlign: "center", marginBottom: "2vh" }}>
             <h1 style={{ fontSize: "8vw", marginBottom: "0.5rem" }}>
               Norman Qian
             </h1>
@@ -172,9 +172,10 @@ export default function Home() {
               Software Developer
             </h2>
           </header>
-
-          <main style={{ width: "100%", textAlign: "center" }}>
-            <h3 style={{ fontSize: "6vw", marginBottom: "1rem" }}>Projects</h3>
+          <div
+            style={{ width: "100%", textAlign: "center", marginBottom: "2vh" }}
+          >
+            <h3 style={{ fontSize: "6vw", marginBottom: "0.5rem" }}></h3>
             <MobileProjectItem
               text="bubblepop.app"
               link="https://bubblepop.app/"
@@ -183,9 +184,8 @@ export default function Home() {
               text="maildemo.app"
               link="https://maildemo.app/"
             />
-          </main>
-
-          <h3 style={{ fontSize: "6vw", marginBottom: "1rem" }}>Contact</h3>
+          </div>
+          <h3 style={{ fontSize: "6vw", marginBottom: "0.5rem" }}>Contact</h3>{" "}
           <div style={{ width: "100%", textAlign: "center" }}>
             <MobileProjectItem
               text="GitHub"
