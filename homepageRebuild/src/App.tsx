@@ -185,8 +185,8 @@ export default function Home() {
             />
           </main>
 
-          <footer style={{ width: "100%", textAlign: "center" }}>
-            <h3 style={{ fontSize: "6vw", marginBottom: "1rem" }}>Contact</h3>
+          <h3 style={{ fontSize: "6vw", marginBottom: "1rem" }}>Contact</h3>
+          <div style={{ width: "100%", textAlign: "center" }}>
             <MobileProjectItem
               text="GitHub"
               link="https://github.com/elizasviel"
@@ -200,7 +200,7 @@ export default function Home() {
               link="mailto:normanqian@gmail.com"
             />
             <MobileProjectItem text="View Resume" link="/resume" />
-          </footer>
+          </div>
         </div>
       </div>
     </>
