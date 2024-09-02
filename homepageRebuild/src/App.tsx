@@ -3,11 +3,37 @@ import gameGif from "../images/gameGif.gif";
 import mailGif from "../images/mailGif.gif";
 import homepageRedrawCutA from "../images/homepageRedrawCutA.png";
 import homepageRedrawCutB from "../images/homepageRedrawCutB.png";
-
 import homepageRedrawCut1 from "../images/homepageRedrawCut1.png";
 import croppedBlackboard from "../images/croppedBlackBoard.png";
 
 import "./App.css";
+
+const MobileProjectItem = ({ text, link }: { text: string; link: string }) => {
+  return (
+    <a
+      href={link}
+      style={{
+        display: "block",
+        margin: "2vw 0",
+        padding: "2vw 4vw",
+        backgroundColor: "rgba(255, 255, 255, 0.1)",
+        borderRadius: "5px",
+        textDecoration: "none",
+        color: "lightgray",
+        fontSize: "4vw",
+        transition: "background-color 0.3s, transform 0.3s",
+      }}
+      onTouchStart={(e) =>
+        (e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.2)")
+      }
+      onTouchEnd={(e) =>
+        (e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.1)")
+      }
+    >
+      {text}
+    </a>
+  );
+};
 
 export default function Home() {
   const [currentGifIndex, setCurrentGifIndex] = useState(0);
@@ -108,16 +134,20 @@ export default function Home() {
         />
         <MovingCirclesContainer />
       </div>
-      <div className="mobile-view" style={{ background: "gray" }}>
+      <div className="mobile-view">
         <img
           style={{
             width: "100vw",
             height: "100vh",
-            position: "absolute",
+            position: "fixed",
+            top: 0,
+            left: 0,
             zIndex: -1,
+            objectFit: "cover",
           }}
           src={croppedBlackboard}
-        ></img>
+          alt="Blackboard background"
+        />
         <div
           style={{
             width: "100vw",
@@ -128,53 +158,49 @@ export default function Home() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            justifyContent: "center",
-            textDecoration: "none",
+            justifyContent: "space-between",
+            padding: "3vh 5vw",
+            boxSizing: "border-box",
+            overflowY: "auto",
           }}
         >
-          <h1>Norman Qian </h1>
-          <h2> Software Portfolio </h2>
+          <header style={{ textAlign: "center" }}>
+            <h1 style={{ fontSize: "8vw", marginBottom: "0.5rem" }}>
+              Norman Qian
+            </h1>
+            <h2 style={{ fontSize: "5vw", marginTop: "0" }}>
+              Software Developer
+            </h2>
+          </header>
 
-          <a
-            href="https://bubblepop.app/"
-            style={{ textDecoration: "none", color: "lightgray" }}
-          >
-            bubblepop.app
-          </a>
+          <main style={{ width: "100%", textAlign: "center" }}>
+            <h3 style={{ fontSize: "6vw", marginBottom: "1rem" }}>Projects</h3>
+            <MobileProjectItem
+              text="bubblepop.app"
+              link="https://bubblepop.app/"
+            />
+            <MobileProjectItem
+              text="maildemo.app"
+              link="https://maildemo.app/"
+            />
+          </main>
 
-          <a
-            href="https://maildemo.app/"
-            style={{ textDecoration: "none", color: "lightgray" }}
-          >
-            maildemo.app
-          </a>
-
-          <h2> Contact </h2>
-          <a
-            href="https://github.com/elizasviel"
-            style={{ textDecoration: "none", color: "lightgray" }}
-          >
-            github.com/elizasviel
-          </a>
-
-          <a
-            href="https://linkedin.com/in/norman-qian"
-            style={{ textDecoration: "none", color: "lightgray" }}
-          >
-            linkedin.com/in/norman-qian
-          </a>
-          <a
-            href="mailto:normanqian@gmail.com"
-            style={{ textDecoration: "none", color: "lightgray" }}
-          >
-            normanqian@gmail.com
-          </a>
-          <a
-            href="/resume"
-            style={{ textDecoration: "none", color: "lightgray" }}
-          >
-            View Resume
-          </a>
+          <footer style={{ width: "100%", textAlign: "center" }}>
+            <h3 style={{ fontSize: "6vw", marginBottom: "1rem" }}>Contact</h3>
+            <MobileProjectItem
+              text="GitHub"
+              link="https://github.com/elizasviel"
+            />
+            <MobileProjectItem
+              text="LinkedIn"
+              link="https://linkedin.com/in/norman-qian"
+            />
+            <MobileProjectItem
+              text="Email"
+              link="mailto:normanqian@gmail.com"
+            />
+            <MobileProjectItem text="View Resume" link="/resume" />
+          </footer>
         </div>
       </div>
     </>
@@ -196,7 +222,7 @@ const BlackboardLG = () => {
         }}
       >
         <h3>Norman Qian </h3>
-        <h5> &nbsp; Building Software </h5>
+        <h5> &nbsp; Software Developer </h5>
         <ProjectItem
           text="github.com/elizasviel"
           link="https://github.com/elizasviel"
