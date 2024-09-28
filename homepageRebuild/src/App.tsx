@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import gameGif from "../images/gameGif.gif";
 import mailGif from "../images/mailGif.gif";
+import FishGameGif from "../images/FishGameGif.gif";
 import homepageRedrawCutA from "../images/homepageRedrawCutA.png";
 import homepageRedrawCutB from "../images/homepageRedrawCutB.png";
 import homepageRedrawCut1 from "../images/homepageRedrawCut1.png";
@@ -46,6 +47,10 @@ export default function Home() {
       link: "https://maildemo.app/",
     },
     { src: gameGif, link: "https://bubblepop.app/" },
+    {
+      src: FishGameGif,
+      link: "https://clientserver0-6dd82c0038d0.herokuapp.com/",
+    },
     // Add more gifs and links as needed
   ];
 
@@ -183,6 +188,10 @@ export default function Home() {
             <MobileProjectItem
               text="maildemo.app"
               link="https://maildemo.app/"
+            />
+            <MobileProjectItem
+              text="Swordfish MMO"
+              link="https://clientserver0-6dd82c0038d0.herokuapp.com/"
             />
           </div>
           <h3 style={{ fontSize: "6vw", marginBottom: "0.5rem" }}>Contact</h3>{" "}
