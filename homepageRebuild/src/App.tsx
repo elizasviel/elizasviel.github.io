@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import gameGif from "../images/gameGif.gif";
 import mailGif from "../images/mailGif.gif";
-import FishGameGif from "../images/FishGameGif.gif";
+import fishGameGif from "../images/fishGame.gif";
 import homepageRedrawCutA from "../images/homepageRedrawCutA.png";
 import homepageRedrawCutB from "../images/homepageRedrawCutB.png";
 import homepageRedrawCut1 from "../images/homepageRedrawCut1.png";
@@ -48,7 +48,7 @@ export default function Home() {
     },
     { src: gameGif, link: "https://bubblepop.app/" },
     {
-      src: FishGameGif,
+      src: fishGameGif,
       link: "https://clientserver0-6dd82c0038d0.herokuapp.com/",
     },
     // Add more gifs and links as needed
